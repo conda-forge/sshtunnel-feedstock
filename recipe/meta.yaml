@@ -1,6 +1,6 @@
 {% set name = "sshtunnel" %}
-{% set version = "0.1.0" %}
-{% set sha256 = "4eb69c18d888cd5b6155504e8a2fd73e1bc041357553b06213963b9e03d4331b" %}
+{% set version = "0.1.1" %}
+{% set sha256 = "6256a368a0ff1177ee23e9d03fe1bfacea0ae00d1bec6652a063f05132643bea" %}
 
 package:
   name: {{ name|lower }}
