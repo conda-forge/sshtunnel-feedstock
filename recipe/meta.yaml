@@ -1,22 +1,20 @@
 {% set name = "sshtunnel" %}
-{% set version = "0.1.3" %}
-{% set sha256 = "598805bb106d8b6d8033a04f2a6b4a64fc9d08a937fe994c7700d0c32d617050" %}
+  {% set version = "0.1.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ version }}.zip
-  url: https://github.com/pahaz/sshtunnel/archive/{{ version }}.zip
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f29ae41a1bd3afa64e9a31029bece2966e4be9a9641e8262372741e691c40d76
 
 build:
   noarch: python
   entry_points:
     - sshtunnel = sshtunnel:_cli_main
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose"
 
 
 requirements:
@@ -26,7 +24,7 @@ requirements:
     - setuptools
   run:
     - python
-    - paramiko
+    - paramiko >=1.15.2
 
 test:
   imports:
