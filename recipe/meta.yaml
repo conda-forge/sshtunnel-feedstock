@@ -1,6 +1,6 @@
 {% set name = "sshtunnel" %}
 {% set version = "0.1.4" %}
-{% set data = load_setup_py_data() %}
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -30,10 +30,10 @@ test:
     - sshtunnel
 
 about:
-  home: {{ data.get('url') }}
-  license: {{ data.get('license') }}
+  home: http://github.com/pahaz/sshtunnel
+  license: MIT
   license_family: MIT
-  summary: {{ data.get('description') }}
+  summary: 'Pure Python SSH tunnels'
   description: |
     sshtunnel Pure python SSH tunnels
     -------------
