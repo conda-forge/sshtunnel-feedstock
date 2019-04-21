@@ -14,7 +14,7 @@ build:
   entry_points:
     - sshtunnel = sshtunnel:_cli_main
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose"
+  script: python -m pip install . --no-deps --ignore-installed --verbose
 
 requirements:
   host:
