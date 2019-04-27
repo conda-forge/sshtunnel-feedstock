@@ -18,12 +18,12 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=2.7
     - pip >=18.1
     - setuptools >=34.0.0
     - paramiko >=1.15.2
   run:
-    - {{ pin_compatible('paramiko') }}
+    - paramiko
 
 test:
   imports:
