@@ -10,15 +10,15 @@ Feedstock license: BSD 3-Clause
 Summary: Pure Python SSH tunnels
 
 sshtunnel Pure python SSH tunnels
--------------
-      Author - [Pahaz Blinov](https://github.com/pahaz)
-        Repo - [sshtunnel](https://github.com/pahaz/sshtunnel/)
-Requirements - [paramiko](http://www.paramiko.org/)
+====================
+      Author - <a href="https://github.com/pahaz">Pahaz Blinov</a>
+        Repo - <a href="https://github.com/pahaz/sshtunnel/">sshtunnel</a>
+Requirements - <a href="http://www.paramiko.org/">paramiko</a>
 
-Inspired by [bgtunnel](https://github.com/jmagnusson/bgtunnel), but it doesn't work on
+Inspired by <a href="https://github.com/jmagnusson/bgtunnel">bgtunnel</a>, but it doesn't work on
 Windows.
 
-See: [demos/forward.py](https://github.com/paramiko/paramiko/blob/master/demos/forward.py)
+See: <a href="https://github.com/paramiko/paramiko/blob/master/demos/forward.py">demos/forward.py</a>
 
 
 Current build status
