@@ -11,9 +11,9 @@ Summary: Pure Python SSH tunnels
 
 **sshtunnel Pure python SSH tunnels**
 
-- Author - [Pahaz Blinov](https://github.com/pahaz)
-- Repo - [sshtunnel](https://github.com/pahaz/sshtunnel/)
-- Requirements - [paramiko](http://www.paramiko.org/)
+- Author [Pahaz Blinov](https://github.com/pahaz)
+- Repo [sshtunnel](https://github.com/pahaz/sshtunnel/)
+- Requirements [paramiko](http://www.paramiko.org/)
 
 Inspired by [bgtunnel](https://github.com/jmagnusson/bgtunnel), but it doesn't work on
 Windows.
