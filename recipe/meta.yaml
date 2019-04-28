@@ -13,7 +13,7 @@ build:
   noarch: python
   entry_points:
     - sshtunnel = sshtunnel:_cli_main
-  number: 0
+  number: 1
   script: python -m pip install . --no-deps --ignore-installed --verbose
 
 requirements:
@@ -33,6 +33,7 @@ about:
   home: http://github.com/pahaz/sshtunnel
   license: MIT
   license_family: MIT
+  license_file: LICENSE
   summary: 'Pure Python SSH tunnels'
   doc_url: https://github.com/pahaz/sshtunnel
   dev_url: https://github.com/pahaz/sshtunnel
