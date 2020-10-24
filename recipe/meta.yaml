@@ -1,5 +1,5 @@
 {% set name = "sshtunnel" %}
-{% set version = "0.1.5" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c813fdcda8e81c3936ffeac47cb69cfb2d1f5e77ad0de656c6dab56aeebd9249
+  sha256: a5c0e7c53e17b26242ead6c6c61e8c0162fe662a8b63f5c8b76fef9636f3c1f6
 
 build:
   noarch: python
@@ -34,7 +34,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Pure Python SSH tunnels'
+  summary: Pure Python SSH tunnels
   doc_url: https://github.com/pahaz/sshtunnel
   dev_url: https://github.com/pahaz/sshtunnel
 
