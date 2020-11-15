@@ -1,5 +1,5 @@
 {% set name = "sshtunnel" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ce28bf9abe6c6b00c5d10343a68c1325f8409ebfb9bf1c1d863a31afa3983cd7
+  sha256: db32cdbec60f2349c017edb8bf88274f559c322647afd89a4fafbc4a6e565dbb
 
 build:
   noarch: python
