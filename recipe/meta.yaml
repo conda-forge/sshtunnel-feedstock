@@ -6,31 +6,35 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sshtunnel-{{ version }}.tar.gz
   sha256: 3b0b36685b066704560991598a0c9587505635c76915d298771c5394abd98909
 
 build:
+  number: 1
   noarch: python
   entry_points:
-    - sshtunnel = sshtunnel:_cli_main
-  number: 0
-  script: python -m pip install . --no-deps --ignore-installed --verbose
+    - sshtunnel=sshtunnel:_cli_main
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=2.7
-    - pip >=18.1
-    - setuptools >=34.0.0
-    - paramiko >=1.15.2
+    - python >=3.7
+    - pip
   run:
-    - paramiko
+    - python >=3.7
+    - paramiko >=1.15.2
 
 test:
   imports:
     - sshtunnel
+  commands:
+    - pip check
+    - sshtunnel --help
+  requires:
+    - pip
 
 about:
-  home: http://github.com/pahaz/sshtunnel
+  home: https://github.com/pahaz/sshtunnel
   license: MIT
   license_family: MIT
   license_file: LICENSE
@@ -44,3 +48,4 @@ extra:
     - pahaz
     - fernandezcuesta
     - BrentDorsey
+    - xylar
