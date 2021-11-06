@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - paramiko >=1.15.2
+    - paramiko >=2.7.2
 
 test:
   imports:
