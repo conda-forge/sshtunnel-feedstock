@@ -1,0 +1,59 @@
+schema_version: 1
+
+context:
+  name: sshtunnel
+  version: "0.5.1"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/sshtunnel-${{ version }}.tar.gz
+  sha256: b7628901e34a297a1a754d136e5e1262cfdef1c3e0a19f75474457ffb49d6838
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - sshtunnel=sshtunnel:_cli_main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - paramiko >=2.7.2
+
+tests:
+  - python:
+      imports:
+        - sshtunnel
+      pip_check: true
+      python_version: ${{ python_min }}
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - sshtunnel --help
+
+about:
+  license: MIT
+  license_file: LICENSE
+  summary: Pure Python SSH tunnels
+  homepage: https://github.com/pahaz/sshtunnel
+  repository: https://github.com/pahaz/sshtunnel
+  documentation: https://github.com/pahaz/sshtunnel
+
+extra:
+  recipe-maintainers:
+    - basnijholt
+    - pahaz
+    - fernandezcuesta
+    - BrentDorsey
+    - xylar
