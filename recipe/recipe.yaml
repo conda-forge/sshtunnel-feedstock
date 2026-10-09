@@ -25,6 +25,7 @@ requirements:
     - python ${{ python_min }}.*
     - pip
     - setuptools
+    - wheel
   run:
     - python >=${{ python_min }}
     - paramiko >=2.7.2
@@ -34,7 +35,9 @@ tests:
       imports:
         - sshtunnel
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}
+        - "*"
   - requirements:
       run:
         - pip
