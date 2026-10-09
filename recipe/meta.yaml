@@ -1,16 +1,16 @@
 {% set name = "sshtunnel" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sshtunnel-{{ version }}.tar.gz
-  sha256: e7cb0ea774db81bf91844db22de72a40aae8f7b0f9bb9ba0f666d474ef6bf9fc
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/sshtunnel-{{ version }}.tar.gz
+  sha256: b7628901e34a297a1a754d136e5e1262cfdef1c3e0a19f75474457ffb49d6838
 
 build:
-  number: 2
+  number: 0
   noarch: python
   entry_points:
     - sshtunnel=sshtunnel:_cli_main
